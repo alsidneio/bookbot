@@ -1,7 +1,9 @@
+from stats import get_num_words, get_character_occurence
+
 
 def main():
-    with open("books/frankenstein.txt") as f:
-        file_contents = f.read()
-        print(file_contents)
-        
+    get_num_words()
+    get_character_occurence()
+
+
 main()
