@@ -1,17 +1,20 @@
 from typing import List
 
 
-def get_num_words():
-    with open("books/frankenstein.txt") as f:
+def get_num_words(book_path):
+    with open(book_path) as f:
         file_contents = f.read()
         words = file_contents.split()
-        print(f"{len(words)} words found in the document")
+        # print(f"{len(words)} words found in the document")
+        
+    return len(words)
+        
 
 
-def get_character_occurence() -> dict:
+def get_character_occurence(book_path) -> dict:
     char_dict = {}
 
-    with open("books/frankenstein.txt") as f:
+    with open(book_path) as f:
         file_contents = f.read()
         for char in file_contents:
             char = char.lower()
